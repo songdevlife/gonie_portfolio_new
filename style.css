@@ -60,3 +60,43 @@ a {
     padding-right: 48px;
     padding-bottom: 60px;
    }
+
+   section {
+    margin-bottom: 10px;
+    scroll-margin-top: 100px;
+   }
+
+   /* ============================================
+   HERO Section
+   ============================================ */
+
+   #hero {
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    position: relative;
+    overflow: visible;
+   }
+
+   #hero::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 600px;
+    height: 500px;
+
+    background: radial-gradient(ellipse at center,
+    rgba(56, 189, 248, 0.18) 0%,
+    rgba(74, 222, 128, 0.10) 45%,
+    transparent 70%);
+    filter: blur(60px);
+
+    pointer-events: none;
+    z-index: 0;
+
+
+   }
