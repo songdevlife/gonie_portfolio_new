@@ -97,6 +97,193 @@ a {
 
     pointer-events: none;
     z-index: 0;
-
-
    }
+
+   #hero > * {
+    position: relative;
+    z-index:1;
+   }
+
+  /*Badge status */
+   .status-badge {
+    display : inline-flex;
+    align-items : center;
+    gap: 8px;
+    background-color: rgba(74, 222, 128, 0.10);
+    border: 1px solid rgba(74,222,128,0.25);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    color: #4ade80;
+    margin-bottom : 28px;
+    letter-spacing: 0.02em;
+   }
+
+  /*Badge status circle*/
+   .status-badge::before {
+    content: '';
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: #4ade80;
+    border-radius: 50%;
+
+    box-shadow: 0 0 6px #4ade80;
+
+    animation: pulse 2s infinite;
+   }
+
+   @keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity:0.4;
+    }
+   }
+
+   #hero h1 {
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: #f8fafc;
+    margin-bottom: 18px;
+   }
+
+   #hero h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 400;
+    color: #4ade80;
+    margin-bottom: 20px;
+   }
+
+   #hero p {
+    max-width : 520px;
+    line-height : 1.8;
+    color: #94a3b8;
+    margin-bottom : 36px;
+   }
+
+   .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+   }
+
+   /*Icons under the HERO */
+   .icon-btn {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content : center;
+
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius : 10px;
+    color: #94a3b8;
+    font-size: 1.1rem;
+
+    transition: border-color 0.3s, color 0.3s, background 0.3s;
+   }
+
+   .icon-btn:hover {
+    border-color: #4ade80;
+    color: #4ade80;
+    background-color: rgba(74, 222, 128, 0.08);
+   }
+
+   .hero-link {
+    padding: 10px 22px;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 10px;
+    color: #e2e8f0;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: border-color 0.3s, color 0.3s, background 0.3s;
+   }
+
+   .hero-link:hover {
+    border-color: #4ade80;
+    color: #4ade80;
+    background-color: rgba(74, 222, 128, 0.08);
+   }
+
+   /* ============================================
+   SECTION LABELS 
+   ============================================ */
+   .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #4ade80;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background-color: rgba(74, 222, 128, 0.08);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 22px;
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+   #about {
+    text-align: left;
+}
+
+#about h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #f8fafc;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.section-description {
+    max-width: 620px;
+    line-height: 1.75;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+
+/* ============================================
+   BENTO GRID
+   ============================================ */
+
+   .bento-grid {
+    margin-top : 40px;
+    display : grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+   }
+
+   .bento-card {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    padding: 28px;
+    min-height: 150px;
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+    transition: border-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+    }
+
+    .bento-card:hover {
+        border-color: rgba(74, 222, 128, 0.25);
+        transform: translateY(-4px);
+    }
+
